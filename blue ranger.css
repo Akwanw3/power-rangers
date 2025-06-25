@@ -1,0 +1,123 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28a745;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeout 2s ease 2s forwards;
+}
+.loader-text{
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: fadein 1s ease-in-out;
+}
+@keyframes fadein{
+    from{
+        opacity: 0; transform: scale(0.95);
+    }
+    to{
+        opacity: 1; transform: scale(1);
+    }
+}
+@keyframes fadeout{
+    to{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+    padding: 20px;
+}
+/* ==typography--*/
+h1, h2, h3, h4, h5, h6 {
+    color: #28a745; /* asa all the headings go get green color*/
+    margin-top: 15px;
+}
+p{
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+/*===layout utilities==*/
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.flex{
+   display: flex; 
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*==colors==*/
+.green{color: #28a745;}
+.yellow{color: #ffc107;}
+.teal{color: #17a2b8;}
+.purple{color: #6f42c1;}
+/*==sections==*/
+section{
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba{0, 0, 0,0.05};
+}
+/*==statistcs section==*/
+.stats-container{
+    background-color: #e8f5e9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(40, 165, 69, 0.2);
+}
+.stats .stats-item{
+    margin: 15px;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    flex: 1 1 200px;
+}
+.stats .stats-item h3{
+    font-size: 2rem;
+    color: #28a745;
+}
+/*==buttons==*/
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/*==footer==*/
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
