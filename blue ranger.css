@@ -235,7 +235,7 @@ body{
 } 
 /*===about==*/
 .about-section{
-    padding: 4rem 2rem;
+    padding: 6rem 2rem;
 }
 .about-content{
     display: flex;
@@ -258,7 +258,7 @@ body{
 
 }
 .stat-item{
-    background-color: #28a745;
+    background-color: #17a2b8;
     color: #f1f1f1;
     border-radius: 12px;
     padding: 1rem 1.5rem;
@@ -269,10 +269,11 @@ body{
 .stats-item:hover{
     transform: scale(1.05);
 }
-.stats-number{
-    font-size: 2rem;
+.stat-number{
+    font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: bolder;
+    
 }
 .stat-label{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -361,15 +362,14 @@ color: #17a2b8;
     border-radius: 8px;
     }
 .submit-button{
-    background-color: #28a745;
-    color: #fff;
+    background-color: #ffc107;
     padding: 0.9rem 2rem;
     border-radius: 12px;
     font-weight: 700;
     cursor: pointer;
 }
 .submit-button:hover{
-    background-color: #218838;
+    background-color: #e0a800;
 }
 /*===footer==*/
 .main-footer{
@@ -377,7 +377,6 @@ color: #17a2b8;
     color: #f1f1f1;
    width: 100vw;
    height:300px;
-   border-radius:50% 50% 0 0 /100% 100% 0 0;
    overflow: hidden;
    justify-content: center;
     text-align: center;
