@@ -21,14 +21,14 @@ box-sizing: border-box;
     color: white;
     font-weight: bold;
     letter-spacing: 2px;
-    animation: fadein 1s ease-in-out;
+    animation: bounce 1s ease-in-out infinite;
 }
-@keyframes fadein{
-    from{
-        opacity: 0; transform: scale(0.95);
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
     }
-    to{
-        opacity: 1; transform: scale(1);
+    50%{
+        transform: translateY(-15px);
     }
 }
 @keyframes fadeout{
@@ -48,6 +48,11 @@ body{
 .main-header{
     background-color: #17a2b8;
     padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9998;
 }
 .navigation{
     display: flex;
@@ -74,7 +79,7 @@ body{
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 600;
-    transition: color 0.3 ease;
+    transition: color 0.3s ease;
 }
 .nav-menu li a:hover{
     color: #28a745;
@@ -84,7 +89,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 2rem;
+    padding-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 7rem;
     background-color: #f9f9f9;
     gap: 2rem;
 }
@@ -311,7 +319,6 @@ body{
 /*==contact==*/
 .contact-section{
     padding: 4rem 2rem;
-    background-color: #e9f7ef;
 }
 .contact-content{
     display: flex;
@@ -368,19 +375,25 @@ color: #17a2b8;
 .main-footer{
     background-color: #17a2b8;
     color: #f1f1f1;
-    padding: 4rem 2rem 6rem;
-    border-top-left-radius: 50% 20%;
-    border-top-right-radius: 50% 20%;
-   
+   width: 100vw;
+   height:300px;
+   border-radius:50% 50% 0 0 /100% 100% 0 0;
+   overflow: hidden;
+   justify-content: center;
     text-align: center;
+    margin-top: 2rem;
+    padding: 10px 50px;
 }
 .footer-content{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin-bottom: 2rem;
-    text-align: left;
+    gap: 1px; 
+   padding-top: 4rem;
+   padding-left: 2px;
+   padding-right: 3px;
+     margin-bottom: 2rem;
+    text-align: center;
 }
 .footer-section h3, .footer-section h4{
 margin-bottom: 1rem;
@@ -409,5 +422,8 @@ text-decoration: underline;
     font-size: 0.9rem;
     opacity: 0.7;
     border-top: 1px solid rgba(255, 225, 225, 0.2);
-    padding-top: 1rem;
+    margin-bottom: auto;
+}
+html{
+    scroll-behavior: smooth;
 }
