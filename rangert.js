@@ -1,3 +1,0 @@
-if(fname != true){
-
-}
