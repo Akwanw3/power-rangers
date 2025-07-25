@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class work</title>
+</head>
+<body>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: purple;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px;
+    }
+    .container{
+        background-color: white;
+        width: 80%;
+        align-items: center;
+        justify-self: center;
+        padding: 20px;
+    }
+    .head{
+        background-color: tomato;
+        padding: 30px;
+        text-align: center;
+    }
+    .head h1{
+        font-size: 21px;
+        margin-bottom: 5px;
+    }
+    .head p{
+        font-size: 14px;
+    }
+    .nav{
+        background-color: black;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+         }
+    .nav ul{
+        display: block;
+       align-items: center;
+        padding: 20px 100px;
+        justify-self: center;
+        
+    }
+    .nav ul li{
+        list-style: none;
+        padding-bottom:20px;
+    }
+    .nav ul li a{
+        text-decoration: none;
+        color: white;
+        background-color: gray;
+        padding:5px 20px;
+        border-radius: 5px;
+    }
+    .hero{
+        background-image: linear-gradient(to right ,red ,orange);
+        margin-top: 50px;
+        height: 50px;
+        width: 95%;
+        text-align: center;
+        justify-self: center;
+        border-radius: 5px;
+        justify-content: center;
+        padding-top: 15px;
+        }
+        .hero h4{
+            font-size: 11px;
+        }
+        H2{
+            color: black;
+            padding-left: 20px;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 10px;
+            justify-content: space-between;
+        }
+        .item{
+            background-color: blue;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            }
+            @media(min-width:600px){
+               .grid{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                height: ;
+               } 
+               .item{
+                height: 200px;
+                overflow: hidden;
+               }
+               .nav ul{
+                display: flex;
+                gap: 20px;
+               }
+               .head h1{
+                font-size: 28px;
+               }
+               .head p{
+                font-size: 18px;
+               }
+               .hero h4{
+                font-size: 13px;
+               }
+
+            }
+            @media(min-width:900px){
+                .grid{
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 10px;
+                }
+                .hero h4{
+                    font-size: 18px;
+                }
+                .head h1{
+                    font-size: 35px;
+                }
+                .head p{
+                    font-size: 22px;
+                    
+                }
+                .hero{
+                    padding: 5px 5px;
+                }
+            }
+            @media(min-width:1200px){
+                .grid{
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 10px;
+                }
+                .hero h4{
+                    font-size: 22px;
+                }
+            }
+            
+</style>
+
+
+
+
+   <div class="container">
+    <header class="head">
+        <h1>Responsive Design - class 9</h1>
+        <p>Mobile First Media Query In Action</p>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h4><span class="text">LARGE DESKTOP VIEW:</span>Resize your browser window to see responsive behavior!</h4>
+    </div><br><br>
+    <h2>Responsive Card Grid</h2>
+    <div class="grid">
+        <div class="item">
+            <h3>Mobile First</h3>
+            <p>Start with mobile style as the foundation. this card shows 1 column on mobile, 2 on tablet, 3 on desktop and 4 on large screen</p>
+        </div>
+        <div class="item">
+            <h3>Progressive <br> Enhancement</h3>
+            <p>Add complexity as screen size increases Each breakpoint enhances the previous design without breaking it.</p>
+        </div>
+        <div class="item">
+            <h3>Flexible Layout</h3>
+            <p>CSS Grid adapts automatically to different screen sizes using responsive grid-temolate columns.</p>
+        </div>
+        <div class="item">
+            <h3>Better Performance</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta sit voluptatem provident dolore nihil, quo quas eos eaque possimus iste reiciendis eum praesentium consequatur odio, magni tenetur maxime, omnis obcaecati.</p>
+        </div>
+    </div>
+   </div>
+</body>
+</html>
