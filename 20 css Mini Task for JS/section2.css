@@ -1,0 +1,170 @@
+.hamburger{
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hamburger span{
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+.hamburger:hover span:nth-child(1){
+    transform: rotate(45deg)
+    translate(5px, 5px);
+}
+.hamburger:hover span:nth-child(2){
+    opacity: 0;
+}
+.hamburger:hover span:nth-child(3){
+    transform: rotate(-45deg)
+    translate(5px, -5px);
+}
+
+
+
+
+/*===task7===*/
+.tab-container{
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid #ccc;
+    justify-content: space-between;
+    background-color: aqua;
+    padding: 5px;
+}
+.tab a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+     transition: color 0.3s ease;
+
+}
+.tab{
+    padding: 10px 30px;
+    position: relative;
+    font-size: 16px;
+   
+}
+.tab:hover a {
+    color: black;
+}
+.slider{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+}
+.tab-container:hover .slider{
+    width: 100px;
+}
+.tab-container .tab:nth-child(1):hover ~ .slider{
+    left: 0;
+}
+.tab-container .tab:nth-child(2):hover ~ .slider{
+    left: 45%;
+}
+.tab-container .tab:nth-child(3):hover ~ .slider{
+    left: 90%;
+}
+
+/*===task8===*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.menu{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+}
+.dropdown:hover .menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    background-color: gray;
+}
+.menu-item{
+    padding: 10px 20px;
+    opacity: 0;
+    animation: fadein 0.3s forwards;
+}
+.menu-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.menu-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.menu-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+@keyframes fadein {
+    to { opacity: 1;
+    transform: translateY(0); }
+    from { opacity: 0 ;
+    transform: translateY(10px); }
+    
+}
+
+
+/*===task9===*/
+
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+.breadcrumb a, .breadcrumb span{
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+.breadcrumb a:hover{
+    color: #007bff;
+}
+.breadcrumb a::after, .breadcrumb span::before{
+    content: '➡';
+   margin-left: 10px;
+   color: #aaa;
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+.breadcrumb a:hover::after{
+    color: #007bff;
+    transform: translateX(5px);
+}
+.breadcrumb span::before{
+    margin-left: 0;
+    margin-left: 10px;
+    transform: translateX(-5px);
+}

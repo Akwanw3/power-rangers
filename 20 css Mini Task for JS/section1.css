@@ -1,0 +1,195 @@
+/*====task1===*/
+.flipcard{
+    background-color: transparent;
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+}
+.flip-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+.flipcard:hover .flip-inner{
+    transform: rotateY(180deg);
+}
+.flip-front, .flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.flip-front{
+    background-color: #f9f9f9;
+}
+.flip-back{
+    background-color: #00bcd4;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/*=====task2====*/
+.btn-loading{
+    position: relative;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: blue;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.btn-loading:hover{
+    background-color: seagreen;
+    animation: pulse 1s infinite;
+}
+.btn-loading .spinner{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 18px;
+   height: 18px; 
+   border: 3px solid rgba(225, 225, 225, 0.6);
+   border-top: white;
+   border-radius: 50%;
+   animation: spin 1s linear  infinite ;
+   display: none;
+}
+.btn-loading .spinner{
+    display: block;
+}
+.btn-loading span{
+    visibility: hidden;
+}
+@keyframes spin {
+    to{
+        transform: translate(-50%, -50%) rotate(360deg);  
+      }
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 123, 225, 0.5);
+    }
+    50%{
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(0, 123, 225, 0);
+    }
+}
+
+
+/*====task3===*/
+
+.expandable-card{
+    width: 300px;
+    height: 50px;
+    background-color: peru;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.4s ease;
+    margin-bottom: 100px;
+}
+.expandable-card .card-header{
+    padding-bottom: 16px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.expandable-card .card-content{
+    padding: 0 16px;
+    opacity: 0;
+    max-height: o;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+.expandable-card:hover{
+    height: 200px;
+}
+.expandable-card:hover .card-content{
+    opacity: 1;
+    max-height: 120px;
+}
+
+
+/*=====task====*/
+
+.fab{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.tel{
+    position: fixed;
+    right: 30px;
+    bottom: 70px;
+    margin-top: 50px;
+    z-index: -2;
+}
+
+/*=====task5===*/
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.overlay{
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, o, 0, 0.7);
+    color: white;
+    padding: 20px;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+.card:hover .overlay{
+    bottom: 0;
+    opacity: 1;
+}
+.card:hover img{
+    transform: scale(1.1);
+}
